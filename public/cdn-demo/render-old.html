@@ -1,0 +1,26 @@
+<!-- This is a react old render method  that was used in react 17 version-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ReactDOM.render Example</title>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <button onclick="alert('UI Still Works?')">Click Me</button>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      function App() {
+        const items = [];
+        for (let i = 0; i < 10000; i++) {
+          items.push(<li key={i}>Item #{i}</li>);
+        }
+        return <ul>{items}</ul>;
+      }
+
+      ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+  </body>
+</html>

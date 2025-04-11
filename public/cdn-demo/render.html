@@ -1,0 +1,27 @@
+<!-- New Render method test  -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ReactDOM.createRoot Example</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <button onclick="alert('UI Still Works?')">Click Me</button>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      function App() {
+        const items = [];
+        for (let i = 0; i < 10000; i++) {
+          items.push(<li key={i}>Item #{i}</li>);
+        }
+        return <ul>{items}</ul>;
+      }
+
+      const root = ReactDOM.createRoot(document.getElementById('root'));
+      root.render(<App />);
+    </script>
+  </body>
+</html>
