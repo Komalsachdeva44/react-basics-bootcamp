@@ -1,11 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
-import User from './User.js';
+import Compclass   from './Compclass.js';
+import React from 'react';
+// One way to show without jsx only react.createElement
+function Fruit(){
+  return React.createElement('h1',null,'Apple')
+}
+// Another way to show with jsx
+function Education(){
+  return <h1>Mac.(IT)</h1>
+}
 function App() {
+  function Color(){
+    return(<h1>Pink</h1>)
+  }
   return (
     <div className="App">
      <h1>Hello World !</h1>
-     <User />
+     <Compclass />
+     {/* <User /> */}
+    {Color()}
+    {Fruit()}
+    {<Education />}
     </div>
   );
 }
