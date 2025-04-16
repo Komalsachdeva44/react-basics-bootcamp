@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Compclass   from './Compclass.js';
 import React from 'react';
+import Clicked from './Clicked.js';
 // One way to show without jsx only react.createElement
 function Fruit(){
   return React.createElement('h1',null,'Apple')
@@ -22,6 +23,7 @@ function App() {
     {Color()}
     {Fruit()}
     {<Education />}
+    { <Clicked /> }
     </div>
   );
 }
