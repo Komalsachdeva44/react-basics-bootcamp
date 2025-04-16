@@ -4,6 +4,8 @@ function Clicked() {
         name="brouno";
         alert(name);
     }
+    console.warn('---------------');
+<h1>hy</h1>
     return (
         <div className="clicked">
             <h1>{name}</h1>     

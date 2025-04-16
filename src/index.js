@@ -7,10 +7,12 @@ import User from './User';
 
 const root = ReactDOM.createRoot(document.getElementById('roots'));
 root.render(
-  <React.StrictMode>
-    <App />
-    <User/>
-  </React.StrictMode>
+  // <React.StrictMode>
+    <React.Fragment>
+      <App />
+      <User />
+    </React.Fragment>
+  // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
