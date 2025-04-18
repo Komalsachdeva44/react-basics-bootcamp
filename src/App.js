@@ -1,30 +1,46 @@
-import logo from './logo.svg';
 import './App.css';
-import Compclass   from './Compclass.js';
+import Compclass from './Compclass.js';
 import React from 'react';
 import Clicked from './Clicked.js';
-// One way to show without jsx only react.createElement
-function Fruit(){
-  return React.createElement('h1',null,'Apple')
+import Username from './Username.js'; // Import the new component
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+
+// Without JSX
+function Fruit() {
+  return React.createElement('h1', null, 'Apple');
 }
-// Another way to show with jsx
-function Education(){
-  return <h1>Mac.(IT)</h1>
+
+// With JSX
+function Education() {
+  return <h1>Mac.(IT)</h1>;
 }
-function App() {
-  function Color(){
-    return(<h1>Pink</h1>)
-  }
+
+function Color() {
+  return <h1>Pink</h1>;
+}
+
+function Home() {
   return (
     <div className="App">
-     <h1>Hello World !</h1>
-     <Compclass />
-     {/* <User /> */}
-    {Color()}
-    {Fruit()}
-    {<Education />}
-    { <Clicked /> }
+      <h1>Hello World!</h1>
+      <Compclass />
+      {Color()}
+      {Fruit()}
+      {<Education />}
+      {<Clicked />}
+      <Link to="/username"><button>Go to Username Page</button></Link>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/username" element={<Username />} />
+      </Routes>
+    </Router>
   );
 }
 
