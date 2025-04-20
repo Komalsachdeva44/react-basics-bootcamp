@@ -10,7 +10,7 @@ root.render(
   // <React.StrictMode>
     <React.Fragment>
       <App />
-      <User />
+      {/* <User /> */}
     </React.Fragment>
   // </React.StrictMode>
 );

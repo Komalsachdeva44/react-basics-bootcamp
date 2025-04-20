@@ -4,7 +4,7 @@ import React from 'react';
 import Clicked from './Clicked.js';
 import Username from './Username.js'; // Import the new component
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-
+import { StateWithClass, WithoutConstructor } from "./statewithclass.js"; // Import the new component
 // Without JSX
 function Fruit() {
   return React.createElement('h1', null, 'Apple');
@@ -12,7 +12,7 @@ function Fruit() {
 
 // With JSX
 function Education() {
-  return <h1>Mac.(IT)</h1>;
+  return <h1>Msc.(IT)</h1>;
 }
 
 function Color() {
@@ -34,11 +34,20 @@ function Home() {
 }
 
 function App() {
+
   return (
     <Router>
+      {/* <WithoutConstructor /> */}
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/username" element={<Username />} />
+        <Route path="/state" element={
+          <>
+            <StateWithClass />
+            <WithoutConstructor />
+          </>
+        } />
       </Routes>
     </Router>
   );
