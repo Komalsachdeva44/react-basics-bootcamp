@@ -5,6 +5,7 @@ import Clicked from './Clicked.js';
 import Username from './Username.js'; // Import the new component
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { StateWithClass, WithoutConstructor } from "./statewithclass.js"; // Import the new component
+import { Propsfunc } from "./propsfunc.js"; // Update to match the new name (uppercase P)
 // Without JSX
 function Fruit() {
   return React.createElement('h1', null, 'Apple');
@@ -42,6 +43,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/username" element={<Username />} />
+        <Route path="/propsfunc" element={<propsfunc />} />
         <Route path="/state" element={
           <>
             <StateWithClass />
